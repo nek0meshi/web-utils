@@ -1,15 +1,36 @@
-<script setup>
-import CountText from "./components/CountText.vue";
-import RandomTextGenerate from "./components/RandomTextGenerate.vue";
-</script>
-
 <template>
   <div>
-    <CountText class="mb-6" />
-    <RandomTextGenerate />
+    <div class="tabs">
+      <ul>
+        <li :class="{ 'is-active': tab === TAB_COUNT_TEXT }">
+          <a @click="selectTab(TAB_COUNT_TEXT)">文字数カウント</a>
+        </li>
+        <li :class="{ 'is-active': tab === TAB_RANDOM_TEXT_GENERATE }">
+          <a @click="selectTab(TAB_RANDOM_TEXT_GENERATE)">ランダム文字列生成</a>
+        </li>
+      </ul>
+    </div>
+    <main>
+      <CountText v-if="tab === TAB_COUNT_TEXT" class="mb-6" />
+      <RandomTextGenerate v-if="tab === TAB_RANDOM_TEXT_GENERATE" />
+    </main>
     <footer></footer>
   </div>
 </template>
+
+<script setup>
+import CountText from "./components/CountText.vue";
+import RandomTextGenerate from "./components/RandomTextGenerate.vue";
+import { ref } from 'vue'
+
+const tab = ref(1)
+const TAB_COUNT_TEXT = 1
+const TAB_RANDOM_TEXT_GENERATE = 2
+
+const selectTab = (selectedTab) => {
+  tab.value = selectedTab
+}
+</script>
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Klee+One&display=swap');
