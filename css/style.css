@@ -35,4 +35,25 @@
   margin-bottom: 10px;
 }
 
+.random-text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
 
+#randomTextArea {
+  width: 100%;
+  min-height: 100px;
+  background-color: #ccc;
+  word-break: break-all;
+  resize: none;
+}
+
+#randomTextSize {
+  width: 80%;
+}
+
+.footer {
+  height: 100px;
+}

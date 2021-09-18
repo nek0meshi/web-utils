@@ -23,6 +23,29 @@
         <dd><span id="gyosuCount">0</span>行</dd>
       </dl>
     </section>
+    <section>
+      <h2>ランダム文字列生成</h2>
+      <div class="random-text-content">
+        <div >
+          <span>文字数</span>
+          <input id="randomTextSize" type="text" value="100">
+        </div>
+        <div>
+          <input type="checkbox" id="checkboxRandomTextNumbers" checked>
+          <label for="checkboxRandomTextNumbers">数字</label>
+          <input type="checkbox" id="checkboxRandomTextUppers" checked>
+          <label for="checkboxRandomTextUppers">英大文字</label>
+          <input type="checkbox" id="checkboxRandomTextLowers" checked>
+          <label for="checkboxRandomTextLowers">英小文字</label>
+        </div>
+        <div>
+          <button id="randomTextGenerateBtn">生成</button>
+          <button id="randomTextCopyBtn">コピー</button>
+        </div>
+        <textarea id="randomTextArea" readonly></textarea>
+      </div>
+    </section>
+    <footer class="footer"></footer>
   </main>
   <script src="js/main.js"></script>
 </body>
