@@ -1,6 +1,10 @@
 <template>
   <div>
-    <div class="tabs">
+    <header class="is-flex mt-5 mb-3 ml-6">
+      <h1 class="title my-auto is-inline-block">Web Utils</h1>
+      <small class="mt-4 ml-5">Web画面から利用できるUtility集</small>
+    </header>
+    <div class="tabs mt-4 mb-5 ml-6">
       <ul>
         <li :class="{ 'is-active': tab === TAB_COUNT_TEXT }">
           <a @click="selectTab(TAB_COUNT_TEXT)">文字数カウント</a>
@@ -39,15 +43,13 @@ const selectTab = (selectedTab) => {
 #app {
   color: #444;
   font-family: Klee One, Helvetica, Arial, sans-serif;
-  width: 480px;
-  margin: 0 auto;
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     font-weight: semi-bold;
     margin-bottom: 1rem;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: semi-bold;
     margin-bottom: 1rem;
   }
@@ -55,8 +57,19 @@ const selectTab = (selectedTab) => {
     font-size: 1.5rem;
     font-weight: semi-bold;
   }
+  main {
+    width: 480px;
+    margin: 0 auto;
+    @media (max-width: $tablet) {
+      margin-left: 3rem;
+    }
+  }
   footer {
     height: 100px;
+  }
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
   }
 }
 </style>
