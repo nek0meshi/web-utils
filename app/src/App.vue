@@ -1,17 +1,19 @@
 <script setup>
+import CountText from "./components/CountText.vue";
+import RandomTextGenerate from "./components/RandomTextGenerate.vue";
 </script>
 
 <template>
-  <div></div>
+  <div>
+    <CountText />
+    <RandomTextGenerate />
+  </div>
 </template>
 
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 480px;
+  margin: 0 auto;
 }
 </style>
