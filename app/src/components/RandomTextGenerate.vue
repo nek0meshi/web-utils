@@ -3,25 +3,42 @@
     <h2>ランダム文字列生成</h2>
     <div class="container">
       <div>
-        <span class="m-2">文字数</span>
-        <input v-model="textLength" type="text">
+        <span class="mr-2">文字数</span>
+        <input v-model="textLength" type="text" class="input">
       </div>
       <div>
         <label>
-          <input v-model="useNumber" type="checkbox"> 数字
+          <input
+            v-model="useNumber"
+            type="checkbox"
+            class="checkbox"
+          > 数字
         </label>
         <label>
-          <input v-model="useUppercaseAlphabet" type="checkbox"> 英大文字
+          <input
+            v-model="useUppercaseAlphabet"
+            type="checkbox"
+            class="checkbox"
+          > 英大文字
         </label>
         <label>
-          <input v-model="useLowercaseAlphabet" type="checkbox"> 英小文字
+          <input
+            v-model="useLowercaseAlphabet"
+            type="checkbox"
+            class="checkbox"
+          > 英小文字
         </label>
       </div>
       <div>
-        <button @click="generate">生成</button>
-        <button @click="copy">コピー</button>
+        <button class="button is-primary mr-2" @click="generate">生成</button>
+        <button class="button is-primary is-light" @click="copy">コピー</button>
       </div>
-      <textarea id="randomTextGenerateTextArea" :value="randomText" readonly></textarea>
+      <textarea
+        id="randomTextGenerateTextArea"
+        class="textarea"
+        :value="randomText"
+        readonly
+      />
     </div>
   </div>
 </template>
@@ -58,7 +75,7 @@ const copy = () => {
 .container {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 10px;
 }
 
 #randomTextGenerateTextArea {
