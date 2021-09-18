@@ -1,9 +1,9 @@
 <template>
   <div>
     <h2>ランダム文字列生成</h2>
-    <div>
-      <div >
-        <span>文字数</span>
+    <div class="container">
+      <div>
+        <span class="m-2">文字数</span>
         <input v-model="textLength" type="text">
       </div>
       <div>
@@ -53,3 +53,16 @@ const copy = () => {
   document.execCommand("copy")
 }
 </script>
+
+<style scoped>
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+#randomTextGenerateTextArea {
+  resize: none;
+  min-height: 200px;
+}
+</style>

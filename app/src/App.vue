@@ -11,8 +11,12 @@ import RandomTextGenerate from "./components/RandomTextGenerate.vue";
 </template>
 
 <style>
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Klee+One&display=swap');
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  color: #444;
+  font-family: Klee One, Helvetica, Arial, sans-serif;
   width: 480px;
   margin: 0 auto;
 }

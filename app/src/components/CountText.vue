@@ -1,15 +1,21 @@
 <template>
   <div>
     <h2>文字数カウント</h2>
-    <textarea v-model="text"></textarea>
-    <dl>
-      <dt>文字数</dt>
-      <dd>{{ textCount }}文字</dd>
-      <dt>文字数<br>（スペースを除く）</dt>
-      <dd>{{ textWithoutSpaceCount }}文字</dd>
-      <dt>行数</dt>
-      <dd>{{ gyosuCount }}行</dd>
-    </dl>
+    <textarea v-model="text" class="text-count-area"></textarea>
+    <table>
+      <tr>
+        <th>文字数</th>
+        <td>{{ textCount }} 文字</td>
+      </tr>
+      <tr>
+        <th>文字数（スペースを除く）</th>
+        <td>{{ textWithoutSpaceCount }} 文字</td>
+      </tr>
+      <tr>
+        <th>行数</th>
+        <td>{{ gyosuCount }} 行</td>
+      </tr>
+    </table>
   </div>
 </template>
 
@@ -29,4 +35,12 @@ const gyosuCount = computed(() =>
 </script>
 
 <style scoped>
+.text-count-area {
+  height: 320px;
+  width: 100%;
+  resize: none;
+}
+th {
+  padding-right: 30px;
+}
 </style>
