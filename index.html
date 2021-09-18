@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>Web Utils</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Web画面で動作するユーティリティ">
+  <meta name="keywords" content="keyword">
+  <link href="css/normalize.css" rel="stylesheet" media="all">
+  <link href="css/style.css" rel="stylesheet" media="all">
+</head>
+<body>
+  <main class="main">
+    <h1>Web Utils</h1>
+    <section>
+      <h2>文字数カウント</h2>
+      <textarea id="textCountArea"></textarea>
+      <dl class="summary-list">
+        <dt>文字数</dt>
+        <dd><span id="textCount">0</span>文字</dd>
+        <dt>文字数<br>（スペースを除く）</dt>
+        <dd><span id="textCountWithoutSpace">0</span>文字</dd>
+        <dt>行数</dt>
+        <dd><span id="gyosuCount">0</span>行</dd>
+      </dl>
+    </section>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+</html>
